@@ -55,8 +55,8 @@ function formatDate(now) {
     minutes = `0${minutes}`;
   }
 
-  return `${hours}:${minutes}, ${day}
-  (${month} ${dates}, ${year})`;
+  return `<strong>${hours}:${minutes}</strong>, ${day}
+  | ${month} ${dates}, ${year}`;
 }
 function searchCity(city) {
   let apiKey = "f78a0dbafabf13190c441b8cod34ftff";
@@ -95,13 +95,13 @@ function displayForecast(response) {
     <div class="weather-forecast-day" id="weather-forecast-day">
       <div class="weather-forecast-date">${formatDay(day.time)}</div>
       <div class="weather-forecast-icon"><img
-        src="${day.condition.icon_url}" alt="" /></div>
+        src="${day.condition.icon_url}" alt="" width="88px" /></div>
       <span class="weather-forecast-temperature"><strong>${Math.round(
         day.temperature.maximum
       )}°</strong></span>
-      <span class="weather-forecast-temperature">${Math.round(
-        day.temperature.minimum
-      )}°</span>
+         &nbsp; <span class="weather-forecast-temperature">${Math.round(
+           day.temperature.minimum
+         )}°</span>
     </div>`;
     }
   });
