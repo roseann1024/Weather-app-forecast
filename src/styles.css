@@ -15,10 +15,6 @@ a {
   font-style: italic;
 }
 
-.logo {
-  width: 200px;
-  margin-bottom: 10px;
-}
 .weather-app-container {
   background: #ecfffb;
   max-width: 600px;
@@ -85,6 +81,11 @@ a {
 .weather-app-unit {
   margin-top: 16px;
   font-size: 28px;
+}
+
+.weather-app-forecast {
+  margin-top: 20px;
+  text-align: center;
 }
 footer {
   border-top: 5px solid white;
