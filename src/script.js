@@ -69,7 +69,30 @@ function searchButton(event) {
   searchCity(searchInput.value);
 }
 
+function displayForecast() {
+  let days = ["Fri", "Sat", "Sun", "Mon", "Tue"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `        
+    <div class="weather-forecast-day" id="weather-forecast-day">
+      <div class="weather-forecast-date">${day}</div>
+      <div class="weather-forecast-icon"><img
+        src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/snow-day.png" alt="" /></div>
+      <span class="weather-forecast-temperature"><strong>2°</strong></span>
+      <span class="weather-forecast-temperature">-2°</span>
+    </div>`;
+  });
+
+  let forecastElement = document.querySelector("#weather-app-forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
+
 let formInput = document.querySelector("#form-input");
 formInput.addEventListener("submit", searchButton);
 
 searchCity("Centennial");
+
+displayForecast();
