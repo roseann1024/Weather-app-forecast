@@ -119,6 +119,11 @@ a {
   margin-right: 50px;
   font-weight: bold;
 }
+
+.weather-app-forecast {
+  margin-top: 20px;
+  text-align: center;
+}
 footer {
   border-top: 1px solid #ffecda;
   padding: 5px 0 0 0;
